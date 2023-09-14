@@ -1,0 +1,8 @@
+.task-container {
+  display: flex;
+}
+
+.done {
+  color: red;
+  text-decoration: line-through;
+}
