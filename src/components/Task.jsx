@@ -4,13 +4,21 @@ import PropTypes from 'prop-types';
 const Task = ({ task, checkHandler, deleteHandler }) => {
   return (
     <div className="task-container">
-      <li key={task.id}>
-        <div className={task.done ? 'done' : ''}>{task.text}</div>
+      <li className="li-task" key={task.id}>
+        <div className={`task-text ${task.done ? 'done' : ''} `}>
+          {task.text}
+        </div>
         <div className="btn-container">
-          <button className="btn-check" onClick={() => checkHandler(task.id)}>
+          <button
+            className="btn btn-check"
+            onClick={() => checkHandler(task.id)}
+          >
             Check
           </button>
-          <button className="btn-delete" onClick={() => deleteHandler(task.id)}>
+          <button
+            className="btn btn-delete"
+            onClick={() => deleteHandler(task.id)}
+          >
             Delete
           </button>
         </div>

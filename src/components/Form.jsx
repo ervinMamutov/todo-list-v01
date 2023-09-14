@@ -45,7 +45,9 @@ const Form = ({ addTask }) => {
           Confirm
         </button>
       </form>
-      {error && <p className="error">Add a new Task</p>}
+      <div className="error-container">
+        {error && <p className="error">Add a new Task</p>}
+      </div>
     </div>
   );
 };
